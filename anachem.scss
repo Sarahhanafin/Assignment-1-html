@@ -1,0 +1,161 @@
+
+$primary-color: #007acc;
+$secondary-color: #8a8a8a;
+$text-color: #2b2b2b;
+$font-color: #333;
+
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+header {
+  background-color: $primary-color;
+  color: $text-color;
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $font-color;
+          padding: 10px;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: $text-color;
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+
+    .hero-title {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; 
+  }
+
+  header {
+    nav {
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .hero-overlay {
+    padding: 10px;
+
+    .hero-title {
+      font-size: 28px; 
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+    }
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .hero-overlay {
+    .hero-title {
+      font-size: 32px; 
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+    }
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px; 
+  }
+
+  .hero-overlay {
+    .hero-title {
+      font-size: 40px; 
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+    }
+  }
+
+  main {
+    padding: 30px;
+  }
+}
